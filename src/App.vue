@@ -1,6 +1,6 @@
 <template lang="pug">
 Navbar
-.container.p-5
+.container.p-2
   router-view 
 </template>
 

@@ -14,5 +14,5 @@ export const createTask = async (task: Task) =>
 export const updateTask = async (id: string, task: Task) =>
   await axios.put("/tasks/" + id, task);
 
-  export const deleteTask = async (id: string) =>
+export const deleteTask = async (id: string) =>
   await axios.delete("/tasks/" + id);

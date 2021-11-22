@@ -1,6 +1,9 @@
 import app from "./app";
 import { startConnection } from "./database";
 
+app.set("port", process.env.PORT || 3000);
+
 startConnection();
-app.listen(3000);
-console.log("Server is running in port 3000");
+app.listen(app.get("port"), () => {
+  console.log("Server is running in port", app.get("port"));
+});
