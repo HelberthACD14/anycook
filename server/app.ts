@@ -22,7 +22,7 @@ app.use(session({
     resave: true,
     saveUninitialized: true
 }))
-// app.use(express.static(path.join(__dirname, "..", "..", "dist")));
+app.use(express.static(path.join(__dirname, "..", "..", "dist")));
 //cd Server
 //npm run build
 //npm start
