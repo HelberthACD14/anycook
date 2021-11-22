@@ -5,12 +5,12 @@
             h2.card-header {{ currentRecipe.title }}
             .card-body
                 h4 Ingredientes
-                p.card-text.infoRecipe(
+                p.card-text.infoRecipeV(
                     v-html="ingredientes.replace(/(\\r)*\\n/g, '<br>')"
                 )
             .card-body
                 h4 Preparacion
-                p.card-text.infoRecipe(
+                p.card-text.infoRecipeV(
                     v-html="preparacion.replace(/(\\r)*\\n/g, '<br>')"
                 )
             .card-body
@@ -59,7 +59,11 @@ export default defineComponent({
 </script>
 <style lang="sass">
 .likes
-    margin-right: 5px
-    margin-left: 10px
-    color: #ff0000
+  margin-right: 5px
+  margin-left: 10px
+  color: #ff0000
+.infoRecipeV
+  overflow-y: scroll
+  text-overflow: ellipsis
+  max-height: 150px
 </style>
